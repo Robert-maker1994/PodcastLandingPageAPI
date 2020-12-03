@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+
+#config 
+/config.env
+
 # production
 /build
 
