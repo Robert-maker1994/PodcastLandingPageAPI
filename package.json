@@ -4,10 +4,10 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "client": "cd ../client && npm start",
+    "build" : "node server.js",
     "start": "node server.js",
     "server": "nodemon server",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "dev": "npm run server"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.23",

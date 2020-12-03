@@ -17,12 +17,7 @@ app.use(express.json());
 
 app.use(cors());
 
-const corsConfig = {
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
-  }
-};
+
 // Setting up Console.log
 app.listen(config.port, () => { 
  console.log(
@@ -37,6 +32,9 @@ client.setConfig({
   listId: config.listId
  
 });
+app.post('/', (req, res) => {
+  res.json('Hello')
+})
 
 // Testing out Calls
 app.post( '/lists', async (req, res) => {
